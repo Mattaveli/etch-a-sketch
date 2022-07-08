@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Etch-A-Sketch</title>
+  </head>
+  <body>
+    <div class="title-container">
+      <h1>Etch-A-Sketch</h1>
+      <p>Build your own sketch by dragging over squares to color them in.</p>
+    </div>
+    <div class="grid-container">
+      <div class="color-selector">
+        <select id="color" class="minimal">
+          <option value="white" disabled selected>Select a color</option>
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
+          <option value="yellow">Yellow</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="indigo">Indigo</option>
+          <option value="violet">Violet</option>
+          <option value="random">Random</option>
+          <option value="white">Eraser</option>
+        </select>
+        <button class="reset-button">Reset</button>
+      </div>
+      <div class="grid-box">
+        <div class="grid-size">
+          <button class="size-button" value="16">Small</button>
+          <button class="size-button" value="26">Medium</button>
+          <button class="size-button" value="38">Large</button>
+        </div>
+        <div class="grid"></div>
+      </div>
+    </div>
+    <div class="footer-container"></div>
+  </body>
+</html>
