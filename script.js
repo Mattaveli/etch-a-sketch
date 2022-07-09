@@ -1,6 +1,3 @@
-let grid = document.querySelector(".grid");
-let gridArea = 25;
-
 function setGrid(size) {
   grid.style.cssText = `grid-template: repeat(${size}, 1fr) / repeat(${size}, 1fr) `;
   for (let i = 0; i < size * size; i++) {
@@ -11,17 +8,6 @@ function setGrid(size) {
   }
   colorCell();
 }
-
-let color;
-let colorDropdown = document.querySelector("#color");
-colorDropdown.addEventListener("click", () => {
-  color = colorDropdown.value;
-});
-
-setGrid(gridArea);
-//colorCell();
-let reset = document.querySelector(".reset-button");
-reset.addEventListener("click", resetGrid);
 
 let gridSize = document.querySelectorAll(".size-button");
 gridSize.forEach((square) => {
@@ -89,3 +75,17 @@ function resetGrid() {
 
   setGrid(gridArea);
 }
+
+let grid = document.querySelector(".grid");
+let gridArea = 25;
+
+let color;
+let colorDropdown = document.querySelector("#color");
+colorDropdown.addEventListener("click", () => {
+  color = colorDropdown.value;
+});
+
+setGrid(gridArea);
+//colorCell();
+let reset = document.querySelector(".reset-button");
+reset.addEventListener("click", resetGrid);
