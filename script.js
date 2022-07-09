@@ -47,26 +47,33 @@ function colorCell() {
   const body = document.querySelector("body");
   const cells = document.querySelectorAll(".square");
   cells.forEach((cell) => {
-    cell.addEventListener("mousedown", () => {
-      isColoring = true;
-    });
-    cell.addEventListener("mousemove", (cell) => {
-      // highlight the mouseover target
-      if (isColoring) {
-        cell.target.style.cssText = "background-color: " + color;
-        if (color == "random") {
-          cell.target.style.cssText = "background-color: " + randColor();
-        }
-      }
-    });
-    cell.addEventListener("mouseup", () => {
-      if (isColoring) {
-        isColoring = false;
-      }
-    });
-    body.addEventListener("mouseup", () => {
-      if (isColoring) {
-        isColoring = false;
+    // cell.addEventListener("mousedown", () => {
+    //   isColoring = true;
+    // });
+    // cell.addEventListener("mousemove", (cell) => {
+    //   // highlight the mouseover target
+    //   if (isColoring) {
+    //     cell.target.style.cssText = "background-color: " + color;
+    //     if (color == "random") {
+    //       cell.target.style.cssText = "background-color: " + randColor();
+    //     }
+    //   }
+    // });
+    // cell.addEventListener("mouseup", () => {
+    //   if (isColoring) {
+    //     isColoring = false;
+    //   }
+    // });
+    // body.addEventListener("mouseup", () => {
+    //   if (isColoring) {
+    //     isColoring = false;
+    //   }
+    // });
+    cell.addEventListener("hover", (cell) => {
+      //highlight the mouseover target
+      cell.target.style.cssText = "background-color: " + color;
+      if (color == "random") {
+        cell.target.style.cssText = "background-color: " + randColor();
       }
     });
   });
