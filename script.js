@@ -69,7 +69,7 @@ function colorCell() {
     //     isColoring = false;
     //   }
     // });
-    cell.addEventListener("hover", (cell) => {
+    cell.addEventListener("mouseover", (cell) => {
       //highlight the mouseover target
       cell.target.style.cssText = "background-color: " + color;
       if (color == "random") {
