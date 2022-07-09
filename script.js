@@ -81,7 +81,7 @@ let gridArea = 25;
 
 let color;
 let colorDropdown = document.querySelector("#color");
-colorDropdown.addEventListener("click", () => {
+colorDropdown.addEventListener("change", () => {
   color = colorDropdown.value;
 });
 
